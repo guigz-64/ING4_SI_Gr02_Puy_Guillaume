@@ -8,7 +8,7 @@ describe('messages', () => {
     await db.admin.clear()
   })
   
-  it.skip('list empty', async () => {
+  it('list empty', async () => {
     // Create a channel
     await supertest(app)
     .post('/channel')
@@ -20,7 +20,7 @@ describe('messages', () => {
     messages.should.match([])
   })
   
-  it.skip('list one message', async () => {
+  it('list one message', async () => {
     // Create a channel
     await supertest(app)
     .post('/channel')
@@ -39,7 +39,7 @@ describe('messages', () => {
     }])
   })
   
-  it.skip('add one element', async () => {
+  it('add one element', async () => {
     // Create a channel
     await supertest(app)
     .post('/channel')
