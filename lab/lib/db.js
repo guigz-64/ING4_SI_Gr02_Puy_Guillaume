@@ -14,8 +14,8 @@ module.exports = {
     create: async (channel) => {
       if(!channel.name) throw Error('Invalid channel')
       id = uuid()
-      store.channels[id] = channel
-      // await db.put(`channels:${id}`, JSON.stringify(channel))
+      //store.channels[id] = channel
+      await db.put(`channels:${id}`, JSON.stringify(channel))
       return merge(channel, {id: id})
     },
     list: async () => {
